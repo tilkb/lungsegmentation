@@ -1,7 +1,8 @@
 # Lung Estimation on Digital Tomosynthesis images
-This is my research, which is created in order to write my thesis. Project to create a CAD system, this framework is created the first step, which is lungsegmentation.
+This is my research, which is created in order to write my thesis. The project is about to create a CAD system, and this framework is created to do the first step of the process, which is lungsegmentation.
 
 ## Segmented image
+
 ![Segmented Lung on DTS](result/LIDC_IDRI_0438_0.25_114.png?raw=true "Segmented Lung on DTS")
 + Blue is the reference
 + Red is segmentation without Model
@@ -22,22 +23,32 @@ This is my research, which is created in order to write my thesis. Project to cr
 + tomovetites.m: project lung mask from CT to tomo with the correct matrix
 
 ##How to use:
+
 ###Prepocessing of the images
-+ If you need any preprocessing, you can use temp forlder for DTS images image_scale.m is for resize the images.
+
++ If you need any preprocessing, you can use temp folder for DTS images image_scale.m is for resize the images.
 + You have to to put images to resize_from folder and get the results in resize_to folder.
+
 ###Build model before first running
+
 + Put the binary images which descibes the shape of the lung to Model_images folder.
-+ You can create a folder in Model_images/axial for each axial CT imageset. These images must describe the volumendistibution os the lung.
-+ After theese steps, please run ModelBuilder.m
++ You can create a folder in Model_images/axial for each axial CT imageset. These images must describe the volume of distribution of the lung.
++ After these steps, please run ModelBuilder.m
+
 ![Segmented lung on CT slice](Modell_images/MASK139.png?raw=true "Reference Lung")
+
 ###Run the segmentetion on DTS
+
 + Put the DTS images to source folder and put reference masks(binary image) to reference folder in the same order
-+ Open segment.m set the central images and run it. You can modify theese parameters.
++ Open segment.m set the central images and run it. You can modify these parameters.
 + Results will appear in the result folder and PREFIX_result.csv file will contain the metrics of the result
+
 ###Run the segmentetion on axial CT images
+
 + Put images to source and run CT segmenter.m and the segmented images will appear in result folder
 ![Segmented lung on CT slice](temp/segmented/ct/CT001.png?raw=true "Segmented lung on CT slice")
 
-##How does it works?
+##How does it work?
+
 + You can read about it in my paper and my Thesis (unfortunately it is Hungarian, if you have question, please contact me)
 + Read BSc-thesis.pdf and IMEKO-final-paper.pdf
