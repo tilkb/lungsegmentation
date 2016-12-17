@@ -1,7 +1,9 @@
 # Lung Estimation on Digital Tomosynthesis images
 This is my research, which is created in order to write my thesis. 
 ![Segmented Lung on DTS](result/LIDC_IDRI_0438_0.25_114.png?raw=true "Segmented Lung on DTS")
-
++ Blue is the reference
++ Red is segmentation without Model
++ Green is segmentation with Model
 Project to create a CAD system, this framework is created the first step, which is lungsegmentation.
 ##Folders of the framework:
 =================
